@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title> Calculadora</title>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <form>
+            <input type="text" placeholder="Digite o primeiro numero" id="num1">
+            <input type="text" placeholder="Digite o segundo numero" id="num2">
+            <input type="text" placeholder= "Digite a operação + - / * " id="oper">
+            <button class="mybutton"> Calcular </button>
+
+        </form>
+        <script>
+               var botao = document.getElementsByClassName('mybutton')
+    botao.onclick = function(){
+    var num1 =  Number(document.getElementById('num1').value)
+    var num2 =  Number(document.getElementById('num2').value)
+    var oper = document.getElementById('oper')
+    var resultado = 0
+    if(oper === '+'){
+        resultado = num1 + num2
+        alert(resultado)
+    }else if(oper === '-'){
+        resultado = num1 - num2
+        alert(resultado)
+    }else if( oper === '/'){
+        resultado = num1 / num2
+        alert(resultado)
+    }else{
+        resultado = num1*num2
+        alert(resultado)
+    }
+}
+        </script>
+    </body>
+</html>
+

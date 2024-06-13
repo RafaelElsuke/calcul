@@ -11,7 +11,7 @@
     <form id="calcForm">
         <input type="text" placeholder="Digite o primeiro número" id="num1">
         <input type="text" placeholder="Digite o segundo número" id="num2">
-        <input type="text" placeholder="Digite a operação + - / * " id="oper">
+        <input type="text" placeholder="Digite + - / * " id="op">
         <button type="button" class="button">Calcular</button>
     </form>
     <p>Resultado: <span id="resultado"></span></p>
@@ -21,16 +21,16 @@
         botao.onclick = function () {
             var num1 = Number(document.getElementById('num1').value);
             var num2 = Number(document.getElementById('num2').value);
-            var oper = document.getElementById('oper').value;
+            var op = document.getElementById('op').value;
             var resultado = 0;
 
-            if (oper == '+') {
+            if (op == '+') {
                 resultado = num1 + num2;
-            } else if (oper == '-') {
+            } else if (op == '-') {
                 resultado = num1 - num2;
-            } else if (oper == '/') {
+            } else if (op == '/') {
                 resultado = num1 / num2;
-            } else if (oper == '*') {
+            } else if (op == '*') {
                 resultado = num1 * num2;
             } else {
                 resultado = 'Operação inválida';
